@@ -1,0 +1,67 @@
+{
+  "kind": "build_request",
+  "title": "Fix Shop page Select empty value error and remove Caffeine attribution from footer",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "text": "Fix the Shop page runtime error by ensuring every <SelectItem /> in Shop filters uses a non-empty value prop, while still allowing users to clear a filter and see the placeholder state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Shop page shows this error:\nA <Select.Item /> must have a value prop that is not an empty string. This is because the Select value can be set to an empty string to clear the selection and show the placeholder."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the Shop page does not throw the error: \"A <Select.Item /> must have a value prop that is not an empty string\".",
+        "All filter dropdowns on ShopPage (Category, Gold Type, Stone Type, Sort By) have no SelectItem with value=\"\".",
+        "Each filter still supports an 'all/default' selection that clears the corresponding filter state (category/goldType/stoneType/sortBy become null) and shows the placeholder text.",
+        "Existing filter option values (e.g., rings, necklaces, eighteenK, fourteenK, diamond, ruby, sapphire, newest, priceLowToHigh, priceHighToLow) continue to work as before."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Remove the 'Built with … caffeine.ai' / 'designed by caffeine' attribution link and related UI from the site footer so the footer only contains AMOR content (keep copyright text and existing footer navigation/contact sections).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Also I want to remove the designed by caffeine logo in the footer."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The footer no longer displays any Caffeine attribution text/link (including \"Built with\" and the caffeine.ai link).",
+        "No Caffeine referral URL is rendered in the footer.",
+        "Footer layout remains visually consistent after removing the attribution block (no broken spacing/alignment)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui (compose only; do not modify).",
+    "Keep changes limited to addressing the Shop page Select error and removing footer attribution; do not introduce new features or redesign unrelated pages."
+  ],
+  "nonGoals": [
+    "Adding new Shop filters or changing the product filtering logic beyond what is necessary to fix the Select value error.",
+    "Changing authentication, backend APIs, or database/state schema.",
+    "Adding or modifying images/assets."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

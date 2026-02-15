@@ -1,0 +1,50 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T09:50:51.980Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-16",
+        "summary": "Fix the Shop page runtime error by ensuring every <SelectItem /> in Shop filters uses a non-empty value prop, while still allowing users to clear a filter and see the placeholder state.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ShopPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ShopPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Remove the 'Built with … caffeine.ai' / 'designed by caffeine' attribution link and related UI from the site footer so the footer only contains AMOR content (keep copyright text and existing footer navigation/contact sections).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/layout/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/layout/SiteFooter.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/pages/ShopPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build AMOR, a minimalistic luxury jewelry e-commerce website with editorial design, full shopping flow (cart/checkout), wishlist and accounts, content sections (New Designs + Blog), Contact messaging, and a secure admin dashboard for managing products, orders, designs, blog, settings, and SEO.",
+  "architectural_notes": [
+    "Brand site: AMOR luxury jewelry e-commerce with editorial/minimal aesthetic and specified palette (#F8F5F2, #E8E1D9, #C6A75E, #2B2B2B) and typography (serif headings + sans body).",
+    "Suggested stack: Next.js/React frontend; Node.js or Django backend; PostgreSQL database; Stripe-ready checkout architecture.",
+    "Admin panel required with secure authentication and CRUD for products/blog/new designs plus order management and exports (CSV).",
+    "Performance/SEO requirements: mobile-first, fast loading, image compression, SEO-optimized pages and configurable meta settings.",
+    "Integrations: Instagram feed for @_amor.gold; email sending via configurable SMTP; contact form stores messages in DB and emails admin(s)."
+  ],
+  "known_issues": [
+    "Shop page runtime error: <Select.Item /> has an empty string value prop; Select.Item values must be non-empty to allow placeholder clearing."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-cohesive-luxury-editorial-visual-system-for-amor-and-apply-it-consistently-across-all-pages-colors-typography-spacing-components-and-motion-using-the-provided-palette-ivory-f8f5f2-soft-beige-e8e1d9-matte-gold-c6a75e-deep-charcoal-2b2b2b-lots-of-white-space-elegant-serif-headings-clean-sans-serif-body-smooth-fade-in-transitions-subtle-hover-micro-interactions-and-subtle-product-image-zoom-on-hover",
+      "title": "Implement a cohesive luxury editorial visual system for AMOR and apply it consistently across all pages (colors, typography, spacing, components, and motion), using the provided palette (Ivory #F8F5F2, Soft Beige #E8E1D9, Matte Gold #C6A75E, Deep Charcoal #2B2B2B), lots of white space, elegant serif headings + clean sans-serif body, smooth fade-in transitions, subtle hover micro-interactions, and subtle product image zoom on hover.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-public-site-navigation-and-routes-for-home-shop-product-detail-new-designs-blog-list-single-post-contact-cart-checkout-flow-wishlist-and-account-order-history",
+      "title": "Create the public site navigation and routes for: Home, Shop, Product Detail, New Designs, Blog (list + single post), Contact, Cart/Checkout flow, Wishlist, and Account (order history).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-1-hero-section-containing-a-full-width-luxury-jewelry-image-brand-name-amor-tagline-crafted-emotion-eternal-gold-and-cta-button-explore-collection-2-featured-collection-section-showing-4-6-featured-products-with-hover-zoom-quick-view-3-about-the-brand-paragraph-and-discover-more-button-4-new-designs-preview-showing-latest-3-and-view-all-designs-button-5-instagram-section-for-amor-gold-6-footer-with-provided-contact-details-and-copyright-amor-2026",
+      "title": "Build the Home page with: (1) hero section containing a full-width luxury jewelry image, brand name “AMOR”, tagline “Crafted Emotion. Eternal Gold.”, and CTA button “Explore Collection”; (2) Featured Collection section showing 4–6 featured products with hover zoom + quick view; (3) About the Brand paragraph and “Discover More” button; (4) New Designs preview showing latest 3 and “View All Designs” button; (5) Instagram section for @_amor.gold; (6) Footer with provided contact details and copyright “AMOR 2026”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-shop-page-with-a-product-grid-filtering-by-category-rings-necklaces-bracelets-earrings-price-range-gold-type-18k-14k-stone-type-and-sorting-by-newest-price-low-high-price-high-low",
+      "title": "Implement the Shop page with a product grid, filtering by Category (Rings, Necklaces, Bracelets, Earrings), price range, gold type (18K, 14K), stone type, and sorting by Newest, Price Low→High, Price High→Low.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-product-detail-pages-with-image-gallery-with-zoom-title-price-description-material-details-stone-details-weight-add-to-cart-add-to-wishlist-share-button-and-related-products",
+      "title": "Create Product Detail pages with: image gallery with zoom, title, price, description, material details, stone details, weight, Add to Cart, Add to Wishlist, Share button, and Related products.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-slide-in-cart-panel-with-quantity-controls-remove-item-subtotal-and-a-checkout-button",
+      "title": "Implement a slide-in cart panel with quantity controls, remove item, subtotal, and a Checkout button.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-checkout-flow-with-forms-for-shipping-information-and-billing-details-a-stripe-ready-payment-structure-ui-and-data-model-placeholders-without-requiring-a-live-stripe-integration-order-placement-an-order-confirmation-page-and-an-email-confirmation-ready-structure-to-the-customer",
+      "title": "Implement the Checkout flow with forms for shipping information and billing details, a Stripe-ready payment structure (UI and data model placeholders without requiring a live Stripe integration), order placement, an Order Confirmation page, and an email-confirmation-ready structure to the customer.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-new-designs-editorial-page-with-large-artistic-imagery-designer-story-behind-each-piece-release-date-optional-limited-edition-badge-and-optional-pre-order-button",
+      "title": "Build the New Designs editorial page with large artistic imagery, designer story behind each piece, release date, optional “Limited Edition” badge, and optional “Pre-order” button.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-blog-listing-page-with-featured-article-section-grid-of-posts-categories-search-bar-and-an-seo-friendly-structure-implement-single-blog-post-pages-with-large-header-image-author-date-social-share-and-related-posts",
+      "title": "Build the Blog listing page with featured article section, grid of posts, categories, search bar, and an SEO-friendly structure; implement single blog post pages with large header image, author, date, social share, and related posts.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-contact-page-showing-the-provided-contact-details-and-a-contact-form-name-email-optional-phone-message-with-validation-spam-protection-storing-messages-in-the-backend-database-and-a-user-confirmation-message-include-admin-notification-email-ready-structure-without-requiring-external-smtp-to-function",
+      "title": "Build the Contact page showing the provided contact details and a contact form (Name, Email, optional Phone, Message) with validation, spam protection, storing messages in the backend database, and a user confirmation message; include admin-notification-email-ready structure without requiring external SMTP to function.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-secure-authentication-using-internet-identity-and-enforce-role-based-access-for-admin-panel-routes-and-admin-only-backend-methods-admin-allowlist-stored-in-backend-settings",
+      "title": "Implement secure authentication using Internet Identity and enforce role-based access for Admin Panel routes and admin-only backend methods (admin allowlist stored in backend settings).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-admin-panel-with-1-dashboard-overview-total-orders-revenue-products-count-blog-posts-count-messages-received-2-product-management-add-edit-delete-multiple-images-upload-price-sale-price-stock-sku-category-featured-flag-3-orders-management-view-orders-update-status-pending-shipped-delivered-csv-export-4-blog-management-add-edit-delete-schedule-posts-manage-categories-feature-image-5-new-designs-management-add-mark-new-mark-limited-edition-set-release-date-6-contact-messages-management-view-mark-as-read-delete-csv-export-7-settings-admin-emails-contact-details-social-links-seo-meta-settings-logo-upload-favicon-upload",
+      "title": "Create the Admin Panel with: (1) dashboard overview (total orders, revenue, products count, blog posts count, messages received); (2) product management (add/edit/delete, multiple images upload, price/sale price, stock, SKU, category, featured flag); (3) orders management (view orders, update status Pending/Shipped/Delivered, CSV export); (4) blog management (add/edit/delete, schedule posts, manage categories, feature image); (5) new designs management (add, mark New, mark Limited Edition, set release date); (6) contact messages management (view, mark as read, delete, CSV export); (7) settings (admin emails, contact details, social links, SEO meta settings, logo upload, favicon upload).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-user-facing-wishlist-user-account-area-and-order-history-signed-in-users-can-save-products-to-a-wishlist-and-view-past-orders-associated-with-their-principal-and-or-email",
+      "title": "Implement user-facing wishlist, user account area, and order history: signed-in users can save products to a wishlist and view past orders associated with their principal and/or email.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-multi-language-ready-structure-with-english-as-default-content-and-ui-text-organized-to-allow-adding-more-languages-later-without-requiring-translation-content-now",
+      "title": "Add multi-language-ready structure with English as default (content and UI text organized to allow adding more languages later) without requiring translation content now.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-seo-and-performance-basics-configurable-site-wide-seo-meta-settings-title-description-og-per-product-and-per-post-meta-where-applicable-mobile-first-responsiveness-iphone-quality-and-image-upload-handling-with-client-side-compression-to-improve-load-time",
+      "title": "Implement SEO and performance basics: configurable site-wide SEO meta settings (title/description/OG), per-product and per-post meta where applicable, mobile-first responsiveness (iPhone-quality), and image upload/handling with client-side compression to improve load time.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-shop-page-runtime-error-by-ensuring-every-selectitem-in-shop-filters-uses-a-non-empty-value-prop-while-still-allowing-users-to-clear-a-filter-and-see-the-placeholder-state",
+      "title": "Fix the Shop page runtime error by ensuring every <SelectItem /> in Shop filters uses a non-empty value prop, while still allowing users to clear a filter and see the placeholder state.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-built-with-caffeine-ai-designed-by-caffeine-attribution-link-and-related-ui-from-the-site-footer-so-the-footer-only-contains-amor-content-keep-copyright-text-and-existing-footer-navigation-contact-sections",
+      "title": "Remove the 'Built with … caffeine.ai' / 'designed by caffeine' attribution link and related UI from the site footer so the footer only contains AMOR content (keep copyright text and existing footer navigation/contact sections).",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create AMOR Home page with hero, featured products, brand/about section, new designs preview, Instagram integration, and footer contact details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement Shop page with product grid, filters (category/price/gold/stone), sorting, and product listing UX",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement Product detail pages with image gallery + zoom, details, wishlist, share, related products, and add-to-cart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement cart and checkout flow: slide-in cart, quantity/remove/subtotal, shipping/billing forms, Stripe-ready payments structure, order confirmation + email confirmation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Build New Designs editorial page with large imagery, designer story, release date, limited edition badge, and optional pre-order",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Build Blog listing and single post pages with featured article, grid, categories, search, SEO structure, share, related posts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Build Contact page with validated form, spam protection, store messages in DB, notify admin via email, and user confirmation message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement secure Admin Panel: login + dashboard analytics + management for products, orders (status + CSV export), blog, new designs, contact messages (export), and site settings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add user accounts: registration/login, password reset, order history, and wishlist system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add luxury UI/UX styling: minimal editorial design, specified palette + typography, smooth page transitions, fade-ins, hover micro-animations, subtle product image zoom, and smooth cursor effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add platform-wide requirements: mobile-first responsive, fast loading (image compression), SEO optimization/meta settings, scalable DB-backed architecture, and multi-language-ready (English default)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Remove the “designed by caffeine” logo/credit from the site footer",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "AMOR",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

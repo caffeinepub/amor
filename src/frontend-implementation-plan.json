@@ -1,0 +1,40 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix Shop Select empty value runtime error and remove footer attribution",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "summary": "Eliminate ShopPage SelectItem empty-string values while preserving a clear-to-placeholder state for each filter.",
+      "acceptanceCriteria": [
+        "Visiting the Shop page does not throw the error: \"A <Select.Item /> must have a value prop that is not an empty string\".",
+        "All filter dropdowns on ShopPage (Category, Gold Type, Stone Type, Sort By) have no SelectItem with value=\"\".",
+        "Each filter still supports an 'all/default' selection that clears the corresponding filter state (category/goldType/stoneType/sortBy become null) and shows the placeholder text.",
+        "Existing filter option values (e.g., rings, necklaces, eighteenK, fourteenK, diamond, ruby, sapphire, newest, priceLowToHigh, priceHighToLow) continue to work as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ShopPage.tsx",
+          "operation": "modify",
+          "description": "Update Category/Gold Type/Stone Type/Sort By shadcn-ui Select usage so no SelectItem uses an empty string value; introduce a non-empty sentinel value for the 'All/Default' option and map selecting it to setting the corresponding state to null, while keeping the Select controlled value as '' when state is null so the placeholder renders. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Remove all Caffeine attribution UI and referral link from the footer while keeping AMOR footer content and layout intact.",
+      "acceptanceCriteria": [
+        "The footer no longer displays any Caffeine attribution text/link (including \"Built with\" and the caffeine.ai link).",
+        "No Caffeine referral URL is rendered in the footer.",
+        "Footer layout remains visually consistent after removing the attribution block (no broken spacing/alignment)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Remove the Caffeine attribution block (\"Built with ... caffeine.ai\") including the referral URL construction and related icon/imports, and adjust the bottom-row layout classes as needed to avoid awkward spacing with only the copyright remaining."
+        }
+      ]
+    }
+  ]
+}

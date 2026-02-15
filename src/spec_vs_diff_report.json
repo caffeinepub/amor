@@ -1,0 +1,32 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T09:50:51.977Z",
+  "summary": "REQ-17 appears implemented by removing the Caffeine attribution from the footer. REQ-16 is only partially evidenced: SelectItem sentinel values like \"all\" are present, but the ShopPage Select components still use an empty-string Select `value` when state is null, which may not satisfy the requirement to show placeholder/cleared state without empty values.",
+  "missing_requirements": [
+    {
+      "id": "REQ-16",
+      "requirement": "Each Shop filter must support an 'all/default' selection that clears the corresponding filter state to null and shows the placeholder text (cleared state).",
+      "reason": "In the diff, the Select components are controlled with `value={... || ''}`. Using an empty string as the Select value when the state is null can prevent the placeholder state from showing correctly (many Select implementations require `undefined` to show placeholder), and it reintroduces an empty-string value path even though SelectItem values are non-empty.",
+      "evidence": [
+        "frontend/src/pages/ShopPage.tsx (Select value={category || ''}, goldType || '', etc. shown)"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "requirement": "All filter dropdowns on ShopPage (Category, Gold Type, Stone Type, Sort By) have no SelectItem with value=\"\".",
+      "reason": "Only the Category dropdown is visible in the truncated diff; the Gold Type / Stone Type / Sort By SelectItem lists are not fully shown, so it cannot be confirmed from the provided diff summary that none of them include `value=\"\"`.",
+      "evidence": [
+        "frontend/src/pages/ShopPage.tsx (truncated after Gold Type section begins)"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/pages/ShopPage.tsx",
+    "project_state.json"
+  ]
+}

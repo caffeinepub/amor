@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-fix-the-shop-page-runtime-error-by-ensuring-every-selectitem-in-shop-filters-uses-a-non-empty-value-prop-while-still-allowing-users-to-clear-a-filter-and-see-the-placeholder-state",
+      "featureTitle": "Fix the Shop page runtime error by ensuring every <SelectItem /> in Shop filters uses a non-empty value prop, while still allowing users to clear a filter and see the placeholder state.",
+      "files": [
+        "frontend/src/pages/ShopPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-built-with-caffeine-ai-designed-by-caffeine-attribution-link-and-related-ui-from-the-site-footer-so-the-footer-only-contains-amor-content-keep-copyright-text-and-existing-footer-navigation-contact-sections",
+      "featureTitle": "Remove the 'Built with … caffeine.ai' / 'designed by caffeine' attribution link and related UI from the site footer so the footer only contains AMOR content (keep copyright text and existing footer navigation/contact sections).",
+      "files": [
+        "frontend/src/components/layout/SiteFooter.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
